@@ -14,8 +14,11 @@ namespace webapi.FIlmes.Interfaces
         List<FilmeDomain> ListarTodos();
 
         void AtualizarIdCorpo(FilmeDomain filme);
+
         void AtualizarIdUrl(int id, FilmeDomain filme);
+
         void Deletar(int id);
+
         FilmeDomain BuscarPorId(int id);
 
 

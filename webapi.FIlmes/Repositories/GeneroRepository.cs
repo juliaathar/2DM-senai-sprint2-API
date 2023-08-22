@@ -5,6 +5,9 @@ namespace webapi.FIlmes.Repositories
 {
     public class GeneroRepository : IGeneroRepository
     {
+                                                                                          // autenticacao atraves do sqlserver:
+        private string stringConexao = "Data Source = NOTE15-S14; Initial Catalog = FilmesJúlia; User Id = sa; Pwd = Senai@134";
+                                                             // autenticacao atraves do windows: Integrated Security = true
         public void AtualizarIdCorpo(GeneroDomain genero)
         {
             throw new NotImplementedException();
