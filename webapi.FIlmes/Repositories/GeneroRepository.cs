@@ -70,12 +70,16 @@ namespace webapi.FIlmes.Repositories
                             IdGenero = Convert.ToInt32(rdr["IdGenero"]),
 
                             //atribui a propriedade Nome o valor recebido no rdr
-                            Nome = rdr["Nome"].ToString()
+                            Nome = rdr["Nome"].ToString()   
                         };
 
+                        //adiciona cada objeto dentro da lista
                         listaGeneros.Add(genero);
                     }
                 }
+
+                //retorna a lista 
+                return listaGeneros;
             }
         }     
     }
