@@ -35,7 +35,18 @@ namespace webapi.FIlmes.Repositories
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
                 //declara a query que sera executada
-                string queryInsert = "INSERT INTO Genero (Nome) VALUES ('" + novoGenero.Nome + "')"; 
+                string queryInsert = "INSERT INTO Genero (Nome) VALUES ('" + novoGenero.Nome + "')";
+
+
+                //declara o sqlcommand com a query que sera executada e a conexao com o bd
+                using (SqlCommand cmd = new SqlCommand(queryInsert, con))
+                {
+                    //abre a conexao com o banco de dados
+                    con.Open();
+
+                    //executar a query
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
 

@@ -31,3 +31,8 @@ C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.
 C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.pdb
 C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.genruntimeconfig.cache
 C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\ref\webapi.FIlmes.dll
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.MvcApplicationPartsAssemblyInfo.cs
