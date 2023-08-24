@@ -6,9 +6,10 @@ namespace webapi.FIlmes.Repositories
 {
     public class GeneroRepository : IGeneroRepository
     {
-        // autenticacao atraves do sqlserver:
+        // autenticação através do sqlserver:
         private string stringConexao = "Data Source = NOTE15-S14; Initial Catalog = FilmesJúlia; User Id = sa; Pwd = Senai@134";
-        // autenticacao atraves do windows: Integrated Security = true
+
+        // autenticação através do windows: Integrated Security = true
         public void AtualizarIdCorpo(GeneroDomain genero)
         {
             throw new NotImplementedException();
@@ -24,9 +25,18 @@ namespace webapi.FIlmes.Repositories
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// cadastrar um novo genero
+        /// </summary>
+        /// <param name="novoGenero"> objeto com as informacoes que serao cadastradas <param>
         public void Cadastrar(GeneroDomain novoGenero)
         {
-            throw new NotImplementedException();
+            //declara a conexao passando a string de conexao como parametro 
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                //declara a query que sera executada
+                string queryInsert = "INSERT INTO Genero (Nome) VALUES ('" + novoGenero.Nome + "')"; 
+            }
         }
 
         public void Deletar(int id)
@@ -35,28 +45,28 @@ namespace webapi.FIlmes.Repositories
         }
 
         /// <summary>
-        /// metodo para listar todos os objetos generos
+        /// método para listar todos os objetos gêneros
         /// </summary>
         /// <returns></returns>
         public List<GeneroDomain> ListarTodos()
         {
-            // cria uma lista de objetos do tipo genero 
+            // cria uma lista de objetos do tipo gênero 
             List<GeneroDomain> listaGeneros = new List<GeneroDomain>();
 
 
-            // declara a sqlconnection passando a string de conexao como parametro 
+            // declara a sqlconnection passando a string de conexão como parâmetro 
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                // declara a instrucao a ser executada
+                // declara a instruçaõ a ser executada
                 string querySelectAll = "SELECT IdGenero, Nome FROM Genero";
 
-                //abre a conexao com o banco de dados
+                //abre a conexão com o banco de dados
                 con.Open();
 
                 //declara o sqldatareader para percorrer a tabela do banco de dados 
                 SqlDataReader rdr;
 
-                //declara o sqlcommand passando a query a ser executada e a conexao com o bd
+                //declara o sqlcommand passando a query a ser executada e a conexão com o bd
                 using (SqlCommand cmd = new SqlCommand(querySelectAll, con))
                 {
                     // executa a query e armazena os dados no rdr
