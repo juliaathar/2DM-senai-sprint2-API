@@ -36,3 +36,5 @@ C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.
 C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\webapi.FIlmes.xml
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.xml

@@ -32,7 +32,10 @@ namespace webapi.FIlmes.Controllers
             _generoRepository = new GeneroRepository();
         }
 
-        //endpoint que aciona o método listarTodos do repositório e retorna a resposta para o usuário(front-end)
+        /// <summary>
+        /// endpoint que aciona o método listarTodos do repositório e retorna a resposta para o usuário(front-end)
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
@@ -47,7 +50,7 @@ namespace webapi.FIlmes.Controllers
             catch (Exception erro)
             {
                 //retorna status code BadRequest(400) e a mensagem do erro
-                return BadRequest(erro.Message);    
+                return BadRequest(erro.Message);
             }
 
         }
@@ -72,6 +75,21 @@ namespace webapi.FIlmes.Controllers
             catch (Exception erro)
             {
                 //retorna status code BadRequest(400) e a mensagem do erro
+                return BadRequest(erro.Message);
+            }
+        }
+
+        [HttpDelete ("{id}")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _generoRepository.Deletar(id);
+
+                return StatusCode(204);
+            }
+            catch(Exception erro)
+            {
                 return BadRequest(erro.Message);
             }
         }

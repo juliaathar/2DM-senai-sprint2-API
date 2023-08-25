@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>webapi.FIlmes</name>
+    </assembly>
+    <members>
+        <member name="P:webapi.FIlmes.Controllers.GeneroController._generoRepository">
+            <summary>
+            objeto _generoRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:webapi.FIlmes.Controllers.GeneroController.Get">
+            <summary>
+            endpoint que aciona o método listarTodos do repositório e retorna a resposta para o usuário(front-end)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.FIlmes.Controllers.GeneroController.Post(webapi.FIlmes.Domains.GeneroDomain)">
+            <summary>
+            endpoint que aciona o metodo de cadastro do genero 
+            </summary>
+            <param name="novoGenero">objeto recebido na requisicao</param>
+            <returns>status code 201(created)</returns>
+        </member>
+        <member name="M:webapi.FIlmes.Interfaces.IFilmeRepository.Cadastrar(webapi.FIlmes.Domains.FilmeDomain)">
+            <summary>
+            Método para cadastrar filmes
+            </summary>
+            <param name="novoFilme"></param>
+        </member>
+        <member name="M:webapi.FIlmes.Interfaces.IGeneroRepository.Cadastrar(webapi.FIlmes.Domains.GeneroDomain)">
+            <summary>
+            Cadastrar um novo gênero
+            </summary>
+            <param name="novoGenero"> objeto que será cadastrado </param>
+        </member>
+        <member name="M:webapi.FIlmes.Interfaces.IGeneroRepository.ListarTodos">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns> lista de objetos cadastrados </returns>
+        </member>
+        <member name="M:webapi.FIlmes.Interfaces.IGeneroRepository.AtualizarIdCorpo(webapi.FIlmes.Domains.GeneroDomain)">
+            <summary>
+            Atualiza um objeto existente passando seu id pelo corpo da requisição
+            </summary>
+            <param name="genero"> objeto a ser atualizado (novas informações) </param>
+        </member>
+        <member name="M:webapi.FIlmes.Interfaces.IGeneroRepository.AtualizarIdUrl(System.Int32,webapi.FIlmes.Domains.GeneroDomain)">
+            <summary>
+            Atualiza um objeto existente passando seu id pela url da requisição
+            </summary>
+            <param name="id"> id do objeto que será atualizado </param>
+            <param name="genero"> objeto a ser atualizado (novas informações) </param>
+        </member>
+        <member name="M:webapi.FIlmes.Interfaces.IGeneroRepository.Deletar(System.Int32)">
+            <summary>
+            Método para deletar um objeto existente passando seu id 
+            </summary>
+            <param name="id"> id do objeto a ser deletado </param>
+        </member>
+        <member name="M:webapi.FIlmes.Interfaces.IGeneroRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Buscar objeto existente pelo id que está cadastrado
+            </summary>
+            <param name="id"> id do objeto a ser buscado </param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:webapi.FIlmes.Repositories.GeneroRepository.Cadastrar(webapi.FIlmes.Domains.GeneroDomain)" -->
+        <member name="M:webapi.FIlmes.Repositories.GeneroRepository.ListarTodos">
+            <summary>
+            método para listar todos os objetos gêneros
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

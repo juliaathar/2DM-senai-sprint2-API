@@ -35,12 +35,14 @@ namespace webapi.FIlmes.Repositories
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
                 //declara a query que sera executada
-                string queryInsert = "INSERT INTO Genero (Nome) VALUES ('" + novoGenero.Nome + "')";
+                string queryInsert = "INSERT INTO Genero (Nome) VALUES (@Nome)";
 
 
                 //declara o sqlcommand com a query que sera executada e a conexao com o bd
                 using (SqlCommand cmd = new SqlCommand(queryInsert, con))
                 {
+                    cmd.Parameters.AddWithValue("@Nome", novoGenero.Nome);
+
                     //abre a conexao com o banco de dados
                     con.Open();
 
@@ -52,7 +54,19 @@ namespace webapi.FIlmes.Repositories
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string queryDelete = "DELETE FROM Genero WHERE IdGenero = @IdGenero";
+
+                using (SqlCommand cmd = new SqlCommand(queryDelete, con))
+                {
+                    cmd.Parameters.AddWithValue("@IdGenero", id);
+
+                    con.Open();
+
+                    cmd.BeginExecuteNonQuery();
+                }
+            }
         }
 
         /// <summary>

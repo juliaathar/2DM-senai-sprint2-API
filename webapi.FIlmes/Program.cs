@@ -1,8 +1,30 @@
+using Microsoft.OpenApi.Models;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 //adiciona o servico de controller
 builder.Services.AddControllers();
-builder.Services.AddSwaggerGen();
+
+//adiciona informações sobre a API no Swagger
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "Filmes API",
+        Description = "API para cadastrar gêneros e filmes - Introdução da sprint 2 - Back-end API",
+        Contact = new OpenApiContact
+        {
+            Name = "Júlia",
+            Url = new Uri("https://github.com/juliaathar")
+        }
+    });
+
+    // configura o swagger para usar o arquivo XML gerado
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+});
 
 var app = builder.Build();
 
