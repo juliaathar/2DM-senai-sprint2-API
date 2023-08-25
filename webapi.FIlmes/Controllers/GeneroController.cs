@@ -79,7 +79,7 @@ namespace webapi.FIlmes.Controllers
             }
         }
 
-        [HttpDelete ("{id}")]
+        [HttpDelete]
         public IActionResult Delete(int id)
         {
             try
