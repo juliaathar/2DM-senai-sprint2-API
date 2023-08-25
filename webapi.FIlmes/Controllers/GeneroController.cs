@@ -79,7 +79,12 @@ namespace webapi.FIlmes.Controllers
             }
         }
 
-        [HttpDelete]
+        /// <summary>
+        /// endpoint que aciona o método de deletar 
+        /// </summary>
+        /// <param name="id"> parâmetro passado para encontrar o que deseja deletar </param>
+        /// <returns></returns>
+        [HttpDelete ("{id}")]
         public IActionResult Delete(int id)
         {
             try
@@ -91,6 +96,22 @@ namespace webapi.FIlmes.Controllers
             catch(Exception erro)
             {
                 return BadRequest(erro.Message);
+            }
+        }
+
+        [HttpGet("{id}")]
+
+        public IActionResult GetById (int id)
+        {
+            try
+            {
+                _generoRepository.BuscarPorId(id);
+
+                return StatusCode(200);
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro.Message); 
             }
         }
     }

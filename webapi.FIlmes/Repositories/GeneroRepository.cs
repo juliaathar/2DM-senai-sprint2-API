@@ -22,7 +22,23 @@ namespace webapi.FIlmes.Repositories
 
         public GeneroDomain BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            GeneroDomain generoBuscado = new GeneroDomain();
+
+            using(SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string querySearch = "SELECT IdGenero, Nome FROM Genero WHERE IdGenero = @IdGenero";
+
+                using(SqlCommand cmd = new SqlCommand(querySearch, con))
+                {
+                    cmd.Parameters.AddWithValue("@IdGenero", id);
+
+                    con.Open();
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            return generoBuscado;
         }
 
         /// <summary>
