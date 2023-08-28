@@ -100,18 +100,24 @@ namespace webapi.FIlmes.Controllers
         }
 
         [HttpGet("{id}")]
-
-        public IActionResult GetById (int id)
+        public IActionResult SearchById(int id)
         {
             try
             {
-                _generoRepository.BuscarPorId(id);
+                GeneroDomain generoBuscado = _generoRepository.BuscarPorId(id);
 
-                return StatusCode(200);
+                if (generoBuscado != null)
+                {
+                    return Ok(generoBuscado); 
+                }
+                else
+                {
+                    return NotFound();
+                }
             }
             catch (Exception erro)
             {
-                return BadRequest(erro.Message); 
+                return BadRequest(erro.Message);
             }
         }
     }

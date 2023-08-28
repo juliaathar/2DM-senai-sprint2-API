@@ -24,20 +24,30 @@ namespace webapi.FIlmes.Repositories
         {
             GeneroDomain generoBuscado = new GeneroDomain();
 
-            using(SqlConnection con = new SqlConnection(stringConexao))
+            using (SqlConnection con = new SqlConnection(stringConexao))
             {
                 string querySearch = "SELECT IdGenero, Nome FROM Genero WHERE IdGenero = @IdGenero";
 
-                using(SqlCommand cmd = new SqlCommand(querySearch, con))
+                using (SqlCommand cmd = new SqlCommand(querySearch, con))
                 {
                     cmd.Parameters.AddWithValue("@IdGenero", id);
 
                     con.Open();
 
-                    cmd.ExecuteNonQuery();
+                    SqlDataReader rdr;
+
+                    rdr = cmd.ExecuteReader();
+
+                    if (rdr.Read())
+                    {
+                        generoBuscado = new GeneroDomain
+                        {
+                            IdGenero = Convert.ToInt32(rdr["IdGenero"]),
+                            Nome = rdr["Nome"].ToString()
+                        };
+                    }
                 }
             }
-
             return generoBuscado;
         }
 
