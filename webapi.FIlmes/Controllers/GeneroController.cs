@@ -120,5 +120,12 @@ namespace webapi.FIlmes.Controllers
                 return BadRequest(erro.Message);
             }
         }
+
+        [HttpPut]
+        public IActionResult Put(GeneroDomain genero)
+        {
+
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using System.Data.SqlClient;
 using webapi.FIlmes.Domains;
 using webapi.FIlmes.Interfaces;
 
@@ -10,10 +11,41 @@ namespace webapi.FIlmes.Repositories
         private string stringConexao = "Data Source = NOTE15-S14; Initial Catalog = FilmesJúlia; User Id = sa; Pwd = Senai@134";
 
         // autenticação através do windows: Integrated Security = true
+
         public void AtualizarIdCorpo(GeneroDomain genero)
         {
-            throw new NotImplementedException();
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                //criadas duas string de conexao, uma para buscar e outra para atualizar caso haja o id buscado
+                string querySearchById = "SELECT IdGenero, Nome FROM Genero WHERE IdGenero = @IdGenero";
+                string queryUpdateById = "UPDATE Genero SET Nome = @Nome WHERE IdGenero = @IdGenero";
+
+                using (SqlCommand cmdSearch = new SqlCommand(querySearchById, con))
+                {
+                    cmdSearch.Parameters.AddWithValue("@IdGenero", genero.IdGenero);
+
+                    con.Open();
+
+                    using (SqlDataReader rdr = cmdSearch.ExecuteReader())
+                    {
+                        if (rdr.Read())
+                        {
+                            
+                            rdr.Close(); // fecha o rdr antes de executar a alteracao de dados
+
+                            using (SqlCommand cmdUpdate = new SqlCommand(queryUpdateById, con))
+                            {
+                                cmdUpdate.Parameters.AddWithValue("@IdGenero", genero.IdGenero);
+                                cmdUpdate.Parameters.AddWithValue("@Nome", genero.Nome);
+
+                                cmdUpdate.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                }
+            }
         }
+
 
         public void AtualizarIdUrl(int id, GeneroDomain genero)
         {

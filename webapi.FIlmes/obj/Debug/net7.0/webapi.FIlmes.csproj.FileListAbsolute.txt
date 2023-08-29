@@ -38,3 +38,43 @@ C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.
 C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\webapi.FIlmes.xml
 C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.xml
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\appsettings.json
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\webapi.FIlmes.exe
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\webapi.FIlmes.deps.json
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\webapi.FIlmes.runtimeconfig.json
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\webapi.FIlmes.dll
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\webapi.FIlmes.pdb
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\webapi.FIlmes.xml
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.csproj.AssemblyReference.cache
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.AssemblyInfoInputs.cache
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.AssemblyInfo.cs
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.csproj.CoreCompileInputs.cache
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\staticwebassets\msbuild.webapi.FIlmes.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\staticwebassets\msbuild.build.webapi.FIlmes.props
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.webapi.FIlmes.props
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.webapi.FIlmes.props
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\scopedcss\bundle\webapi.FIlmes.styles.css
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.csproj.CopyComplete
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.dll
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\refint\webapi.FIlmes.dll
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.xml
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.pdb
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.genruntimeconfig.cache
+C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\ref\webapi.FIlmes.dll
