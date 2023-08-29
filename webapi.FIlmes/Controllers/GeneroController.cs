@@ -147,6 +147,12 @@ namespace webapi.FIlmes.Controllers
             }
         }
 
+        /// <summary>
+        /// endpoint que aciona metodo de atualizar dados por id passando pela url
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="genero"></param>
+        /// <returns></returns>
         [HttpPut("{Id}")]
         public IActionResult PutByUrl(int id, GeneroDomain genero)
         {

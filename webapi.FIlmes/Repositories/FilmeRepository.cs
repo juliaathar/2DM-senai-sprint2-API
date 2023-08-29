@@ -1,10 +1,12 @@
-﻿using webapi.FIlmes.Domains;
+﻿using System.Data.SqlClient;
+using webapi.FIlmes.Domains;
 using webapi.FIlmes.Interfaces;
 
 namespace webapi.FIlmes.Repositories
 {
     public class FilmeRepository : IFilmeRepository
     {
+        private string stringConexao = "Data Source = NOTE15-S14; Initial Catalog = FilmesJúlia; User Id = sa; Pwd = Senai@134";
         public void AtualizarIdCorpo(FilmeDomain filme)
         {
             throw new NotImplementedException();
@@ -22,7 +24,20 @@ namespace webapi.FIlmes.Repositories
 
         public void Cadastrar(FilmeDomain novoFilme)
         {
-            throw new NotImplementedException();
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string queryInsert = "INSERT INTO Filme (IdGenero, Titulo) VALUES (@IdGenero, @Titulo)";
+
+                using (SqlCommand cmd = new SqlCommand(queryInsert, con))
+                {
+                    cmd.Parameters.AddWithValue("@IdGenero", novoFilme.IdGenero);
+                    cmd.Parameters.AddWithValue("@Titulo", novoFilme.Titulo);
+
+                    con.Open();
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
         public void Deletar(int id)
