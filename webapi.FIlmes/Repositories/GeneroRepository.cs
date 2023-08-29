@@ -53,14 +53,14 @@ namespace webapi.FIlmes.Repositories
             {
                 string queryUpdateByUrl = "UPDATE Genero SET Nome = @Nome WHERE IdGenero = @IdGenero";
 
-                using (SqlCommand comando = new SqlCommand(queryUpdateByUrl, con))
+                using (SqlCommand cmd = new SqlCommand(queryUpdateByUrl, con))
                 {
-                    comando.Parameters.AddWithValue("@Nome", genero.Nome);
-                    comando.Parameters.AddWithValue("@IdGenero", id);
+                    cmd.Parameters.AddWithValue("@Nome", genero.Nome);
+                    cmd.Parameters.AddWithValue("@IdGenero", id);
 
                     con.Open();
 
-                    comando.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
                 }
             }
         }
