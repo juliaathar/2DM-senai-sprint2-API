@@ -44,5 +44,20 @@ namespace webapi.FIlmes.Controllers
                 return BadRequest(erro.Message);
             }
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _filmeRepository.Deletar(id);
+
+                return StatusCode (200);
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro.Message);
+            }
+        }
     }
 }

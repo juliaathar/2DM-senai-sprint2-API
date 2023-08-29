@@ -42,7 +42,19 @@ namespace webapi.FIlmes.Repositories
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string queryDelete = "DELETE Filme WHERE IdFilme = @IdFilme";
+
+                using(SqlCommand cmd = new SqlCommand(queryDelete, con))
+                {
+                    cmd.Parameters.AddWithValue("@IdFilme", id);
+
+                    con.Open();
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
         public List<FilmeDomain> ListarTodos()
