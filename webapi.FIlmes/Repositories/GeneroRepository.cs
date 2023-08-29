@@ -49,7 +49,20 @@ namespace webapi.FIlmes.Repositories
 
         public void AtualizarIdUrl(int id, GeneroDomain genero)
         {
-            throw new NotImplementedException();
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string queryUpdateByUrl = "UPDATE Genero SET Nome = @Nome WHERE IdGenero = @IdGenero";
+
+                using (SqlCommand comando = new SqlCommand(queryUpdateByUrl, con))
+                {
+                    comando.Parameters.AddWithValue("@Nome", genero.Nome);
+                    comando.Parameters.AddWithValue("@IdGenero", id);
+
+                    con.Open();
+
+                    comando.ExecuteNonQuery();
+                }
+            }
         }
 
         public GeneroDomain BuscarPorId(int id)

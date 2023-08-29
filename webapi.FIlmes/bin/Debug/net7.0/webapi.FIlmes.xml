@@ -29,6 +29,20 @@
             <param name="id"> parâmetro passado para encontrar o que deseja deletar </param>
             <returns></returns>
         </member>
+        <member name="M:webapi.FIlmes.Controllers.GeneroController.SearchById(System.Int32)">
+            <summary>
+            endpoint que aciona o metodo de buscar por id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.FIlmes.Controllers.GeneroController.Put(webapi.FIlmes.Domains.GeneroDomain)">
+            <summary>
+            endpoint que aciona o metodo de atualizar dados por id no corpo
+            </summary>
+            <param name="genero"></param>
+            <returns></returns>
+        </member>
         <member name="M:webapi.FIlmes.Interfaces.IFilmeRepository.Cadastrar(webapi.FIlmes.Domains.FilmeDomain)">
             <summary>
             Método para cadastrar filmes

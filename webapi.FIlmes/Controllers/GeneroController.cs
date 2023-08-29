@@ -99,6 +99,12 @@ namespace webapi.FIlmes.Controllers
             }
         }
 
+
+        /// <summary>
+        /// endpoint que aciona o metodo de buscar por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult SearchById(int id)
         {
@@ -121,6 +127,11 @@ namespace webapi.FIlmes.Controllers
             }
         }
 
+        /// <summary>
+        /// endpoint que aciona o metodo de atualizar dados por id no corpo
+        /// </summary>
+        /// <param name="genero"></param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Put(GeneroDomain genero)
         {
@@ -133,6 +144,22 @@ namespace webapi.FIlmes.Controllers
             catch (Exception erro)
             {
                 return BadRequest(erro.Message); 
+            }
+        }
+
+        [HttpPut("{Id}")]
+        public IActionResult PutByUrl(int id, GeneroDomain genero)
+        {
+            try
+            {
+                _generoRepository.AtualizarIdUrl(id, genero);
+
+                return StatusCode(200);
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro.Message);
             }
         }
 
