@@ -19,7 +19,12 @@ namespace webapi.FIlmes.Repositories
 
         public FilmeDomain BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            GeneroDomain generoBusca= new GeneroDomain();
+
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string queryGetById = "SELECT IdFilme, IdGenero, Nome FROM Filme WHERE IdFilme = @IdFilme";
+            }
         }
 
         public void Cadastrar(FilmeDomain novoFilme)
