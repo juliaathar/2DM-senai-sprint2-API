@@ -896,19 +896,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aquar\\.nuget\\packages\\": {}
+    "C:\\Users\\47447272809\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aquar\\OneDrive\\Área de Trabalho\\2DM-senai-sprint2-API\\webapi.FIlmes\\webapi.FIlmes.csproj",
+      "projectUniqueName": "C:\\Users\\47447272809\\Desktop\\2DM-senai-sprint2-API\\webapi.FIlmes\\webapi.FIlmes.csproj",
       "projectName": "webapi.FIlmes",
-      "projectPath": "C:\\Users\\aquar\\OneDrive\\Área de Trabalho\\2DM-senai-sprint2-API\\webapi.FIlmes\\webapi.FIlmes.csproj",
-      "packagesPath": "C:\\Users\\aquar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aquar\\OneDrive\\Área de Trabalho\\2DM-senai-sprint2-API\\webapi.FIlmes\\obj\\",
+      "projectPath": "C:\\Users\\47447272809\\Desktop\\2DM-senai-sprint2-API\\webapi.FIlmes\\webapi.FIlmes.csproj",
+      "packagesPath": "C:\\Users\\47447272809\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\47447272809\\Desktop\\2DM-senai-sprint2-API\\webapi.FIlmes\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aquar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\47447272809\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -124,7 +124,16 @@ namespace webapi.FIlmes.Controllers
         [HttpPut]
         public IActionResult Put(GeneroDomain genero)
         {
+            try
+            {
+                _generoRepository.AtualizarIdCorpo(genero);
 
+                return StatusCode(200);
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro.Message); 
+            }
         }
 
     }
