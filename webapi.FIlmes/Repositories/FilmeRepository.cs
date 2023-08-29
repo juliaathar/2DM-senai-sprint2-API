@@ -59,7 +59,37 @@ namespace webapi.FIlmes.Repositories
 
         public List<FilmeDomain> ListarTodos()
         {
-            throw new NotImplementedException();
+            List<FilmeDomain> listaFilmes = new List<FilmeDomain>();
+
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string querySelectAll = "SELECT IdFilme, IdGenero, Titulo FROM Filme";
+
+                con.Open();
+
+                using (SqlCommand cmd = new SqlCommand(querySelectAll, con))
+                {
+                    SqlDataReader rdr;
+
+                    rdr = cmd.ExecuteReader();
+
+                    while (rdr.Read())
+                    {
+                        FilmeDomain filme = new FilmeDomain()
+                        {
+                            IdFilme = Convert.ToInt32(rdr["IdFilme"]),
+
+                            IdGenero = Convert.ToInt32(rdr["IdGenero"]),
+
+                            Titulo = rdr["Titulo"].ToString()
+                        };
+
+                        listaFilmes.Add(filme);
+                    }
+                }
+
+                return listaFilmes;
+            }
         }
     }
 }

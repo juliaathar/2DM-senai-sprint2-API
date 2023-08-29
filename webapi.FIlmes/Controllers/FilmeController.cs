@@ -45,6 +45,11 @@ namespace webapi.FIlmes.Controllers
             }
         }
 
+        /// <summary>
+        /// endpoint que aciona o metodo de deletar um filme
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -53,6 +58,26 @@ namespace webapi.FIlmes.Controllers
                 _filmeRepository.Deletar(id);
 
                 return StatusCode (200);
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro.Message);
+            }
+        }
+
+        /// <summary>
+        /// endpoint que aciona um metodo de listar os filmes cadastrados
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public IActionResult Get()
+        {
+            try
+            {
+
+               List<FilmeDomain> listaFilmes = _filmeRepository.ListarTodos();
+
+                return Ok(listaFilmes);
             }
             catch (Exception erro)
             {
