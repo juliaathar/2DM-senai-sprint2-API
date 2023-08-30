@@ -4,6 +4,48 @@
         <name>webapi.FIlmes</name>
     </assembly>
     <members>
+        <member name="M:webapi.FIlmes.Controllers.FilmeController.Post(webapi.FIlmes.Domains.FilmeDomain)">
+            <summary>
+            endpoint que aciona o metodo de cadastrar um filme
+            </summary>
+            <param name="novoFilme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.FIlmes.Controllers.FilmeController.Delete(System.Int32)">
+            <summary>
+            endpoint que aciona o metodo de deletar um filme
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.FIlmes.Controllers.FilmeController.Get">
+            <summary>
+            endpoint que aciona um metodo de listar os filmes cadastrados
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.FIlmes.Controllers.FilmeController.SearchById(System.Int32)">
+            <summary>
+            endpoint que aciona o metodo de buscar por id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.FIlmes.Controllers.FilmeController.Put(webapi.FIlmes.Domains.FilmeDomain)">
+            <summary>
+            endpoin que aciona o metodo de atualizar os dados pelo id passando pelo corpo
+            </summary>
+            <param name="filme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.FIlmes.Controllers.FilmeController.PutByUrl(System.Int32,webapi.FIlmes.Domains.FilmeDomain)">
+            <summary>
+            endpoint que aciona o metodo de atualizar os dados pelo id passando pela url
+            </summary>
+            <param name="id"></param>
+            <param name="filme"></param>
+            <returns></returns>
+        </member>
         <member name="P:webapi.FIlmes.Controllers.GeneroController._generoRepository">
             <summary>
             objeto _generoRepository que irá receber todos os métodos definidos na interface
@@ -40,6 +82,14 @@
             <summary>
             endpoint que aciona o metodo de atualizar dados por id no corpo
             </summary>
+            <param name="genero"></param>
+            <returns></returns>
+        </member>
+        <member name="M:webapi.FIlmes.Controllers.GeneroController.PutByUrl(System.Int32,webapi.FIlmes.Domains.GeneroDomain)">
+            <summary>
+            endpoint que aciona metodo de atualizar dados por id passando pela url
+            </summary>
+            <param name="id"></param>
             <param name="genero"></param>
             <returns></returns>
         </member>

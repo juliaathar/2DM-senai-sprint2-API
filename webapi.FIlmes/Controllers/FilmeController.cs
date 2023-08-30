@@ -85,6 +85,11 @@ namespace webapi.FIlmes.Controllers
             }
         }
 
+        /// <summary>
+        /// endpoint que aciona o metodo de buscar por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult SearchById(int id)
         {
@@ -99,6 +104,11 @@ namespace webapi.FIlmes.Controllers
             }
         }
 
+        /// <summary>
+        /// endpoin que aciona o metodo de atualizar os dados pelo id passando pelo corpo
+        /// </summary>
+        /// <param name="filme"></param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Put(FilmeDomain filme)
         {
@@ -114,6 +124,12 @@ namespace webapi.FIlmes.Controllers
             }
         }
 
+        /// <summary>
+        /// endpoint que aciona o metodo de atualizar os dados pelo id passando pela url
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="filme"></param>
+        /// <returns></returns>
         [HttpPut("{Id}")]
         public IActionResult PutByUrl(int id, FilmeDomain filme)
         {

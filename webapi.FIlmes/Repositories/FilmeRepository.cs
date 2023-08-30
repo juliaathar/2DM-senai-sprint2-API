@@ -70,7 +70,7 @@ namespace webapi.FIlmes.Repositories
 
                 using (SqlCommand cmd = new SqlCommand(queryGetById, con))
                 {
-                    cmd.Parameters.AddWithValue("IdGenero", id);
+                    cmd.Parameters.AddWithValue("@IdFilme", id);
 
                     con.Open();
 
