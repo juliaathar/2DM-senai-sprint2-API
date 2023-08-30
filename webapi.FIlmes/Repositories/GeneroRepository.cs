@@ -30,7 +30,7 @@ namespace webapi.FIlmes.Repositories
                     {
                         if (rdr.Read())
                         {
-                            
+
                             rdr.Close(); // fecha o rdr antes de executar a alteracao de dados
 
                             using (SqlCommand cmdUpdate = new SqlCommand(queryUpdateById, con))
@@ -176,7 +176,7 @@ namespace webapi.FIlmes.Repositories
                             IdGenero = Convert.ToInt32(rdr["IdGenero"]),
 
                             //atribui a propriedade Nome o valor recebido no rdr
-                            Nome = rdr["Nome"].ToString()   
+                            Nome = rdr["Nome"].ToString()
                         };
 
                         //adiciona cada objeto dentro da lista
@@ -187,7 +187,7 @@ namespace webapi.FIlmes.Repositories
                 //retorna a lista 
                 return listaGeneros;
             }
-        }     
+        }
     }
 }
 

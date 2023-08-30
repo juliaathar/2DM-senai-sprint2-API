@@ -84,7 +84,7 @@ namespace webapi.FIlmes.Controllers
         /// </summary>
         /// <param name="id"> parâmetro passado para encontrar o que deseja deletar </param>
         /// <returns></returns>
-        [HttpDelete ("{id}")]
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             try
@@ -93,7 +93,7 @@ namespace webapi.FIlmes.Controllers
 
                 return StatusCode(204);
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
                 return BadRequest(erro.Message);
             }
@@ -114,7 +114,7 @@ namespace webapi.FIlmes.Controllers
 
                 if (generoBuscado != null)
                 {
-                    return Ok(generoBuscado); 
+                    return Ok(generoBuscado);
                 }
                 else
                 {
@@ -143,7 +143,7 @@ namespace webapi.FIlmes.Controllers
             }
             catch (Exception erro)
             {
-                return BadRequest(erro.Message); 
+                return BadRequest(erro.Message);
             }
         }
 

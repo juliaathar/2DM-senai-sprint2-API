@@ -57,7 +57,7 @@ namespace webapi.FIlmes.Controllers
             {
                 _filmeRepository.Deletar(id);
 
-                return StatusCode (200);
+                return StatusCode(200);
             }
             catch (Exception erro)
             {
@@ -75,7 +75,7 @@ namespace webapi.FIlmes.Controllers
             try
             {
 
-               List<FilmeDomain> listaFilmes = _filmeRepository.ListarTodos();
+                List<FilmeDomain> listaFilmes = _filmeRepository.ListarTodos();
 
                 return Ok(listaFilmes);
             }
@@ -84,5 +84,51 @@ namespace webapi.FIlmes.Controllers
                 return BadRequest(erro.Message);
             }
         }
+
+        [HttpGet("{id}")]
+        public IActionResult SearchById(int id)
+        {
+            try
+            {
+                _filmeRepository.BuscarPorId(id);
+                return StatusCode(200);
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro.Message);
+            }
+        }
+
+        [HttpPut]
+        public IActionResult Put(FilmeDomain filme)
+        {
+            try
+            {
+                _filmeRepository.AtualizarIdCorpo(filme);
+
+                return StatusCode(200);
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro.Message);
+            }
+        }
+
+        [HttpPut("{Id}")]
+        public IActionResult PutByUrl(int id, FilmeDomain filme)
+        {
+            try
+            {
+                _filmeRepository.AtualizarIdUrl(id, filme);
+
+                return StatusCode(200);
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro.Message);
+            }
+        }
+
     }
 }
