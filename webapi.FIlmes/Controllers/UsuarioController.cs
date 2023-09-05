@@ -25,11 +25,11 @@ namespace webapi.FIlmes.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(string Email, string Senha)
+        public IActionResult Login(UsuarioDomain usuarioLogin)
         {
             try
             {
-                UsuarioDomain usuario = _usuarioRepository.Login(Email, Senha) ;
+                UsuarioDomain usuario = _usuarioRepository.Login(usuarioLogin.Email, usuarioLogin.Senha) ;
 
                 if (usuario == null)
                 {
@@ -89,7 +89,6 @@ namespace webapi.FIlmes.Controllers
             {
                 return BadRequest(erro.Message);
             }
-            return Ok();
         }
     }
 }

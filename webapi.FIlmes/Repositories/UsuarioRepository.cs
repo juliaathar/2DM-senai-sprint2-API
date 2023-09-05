@@ -12,12 +12,12 @@ namespace webapi.FIlmes.Repositories
         {
             using (SqlConnection con = new SqlConnection (stringConexao))
             {
-                string querySearch = "SELECT IdUsuario, Permissao FROM Usuario WHERE Email = @Email AND Senha = @Senha";
+                string querySearch = "SELECT IdUsuario, Email, Permissao FROM Usuario WHERE Email = @Email AND Senha = @Senha";
 
                 using (SqlCommand cmd = new SqlCommand (querySearch, con))
                 {
-                    cmd.Parameters.AddWithValue("@Email", Email);
-                    cmd.Parameters.AddWithValue("@Senha", Senha);
+                    cmd.Parameters.AddWithValue("@Email",Email);
+                    cmd.Parameters.AddWithValue("@Senha",Senha);
 
                     con.Open ();
 
@@ -30,6 +30,7 @@ namespace webapi.FIlmes.Repositories
                         UsuarioDomain usuario = new UsuarioDomain
                         {
                             IdUsuario = Convert.ToInt32(rdr["IdUsuario"]),
+                            Email = rdr["Email"].ToString()!,
                             Permissao = rdr["Permissao"].ToString()
                         };
 

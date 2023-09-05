@@ -78,3 +78,11 @@ C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\ob
 C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.pdb
 C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\webapi.FIlmes.genruntimeconfig.cache
 C:\Users\aquar\OneDrive\Área de Trabalho\2DM-senai-sprint2-API\webapi.FIlmes\obj\Debug\net7.0\ref\webapi.FIlmes.dll
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\47447272809\Desktop\2DM-senai-sprint2-API\webapi.FIlmes\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
