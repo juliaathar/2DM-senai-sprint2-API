@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using webapi.FIlmes.Domains;
 using webapi.FIlmes.Interfaces;
@@ -19,7 +20,7 @@ namespace webapi.FIlmes.Controllers
 
     //método controlador que herda da controller base
     //onde será criado os endpoints (rotas)
-    public class GeneroController : ControllerBase
+    public class GeneroController : ControllerBase 
     {
         /// <summary>
         /// objeto _generoRepository que irá receber todos os métodos definidos na interface
@@ -37,6 +38,7 @@ namespace webapi.FIlmes.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        [Authorize (Roles = "Administrador, Comum")]
         public IActionResult Get()
         {
             try
@@ -61,6 +63,7 @@ namespace webapi.FIlmes.Controllers
         /// <param name="novoGenero">objeto recebido na requisicao</param>
         /// <returns>status code 201(created)</returns>
         [HttpPost]
+        [Authorize(Roles = "Administrador")]
         public IActionResult Post(GeneroDomain novoGenero)
         {
 
@@ -85,6 +88,7 @@ namespace webapi.FIlmes.Controllers
         /// <param name="id"> parâmetro passado para encontrar o que deseja deletar </param>
         /// <returns></returns>
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador")]
         public IActionResult Delete(int id)
         {
             try
